@@ -1,0 +1,42 @@
+{
+  "parser": "@typescript-eslint/parser", 
+  "root": true, 
+  "extends": [ 
+    "plugin:@next/next/recommended",
+    "plugin:prettier/recommended", 
+    "plugin:react/recommended", 
+    "plugin:@typescript-eslint/recommended", 
+    "prettier"
+  ],
+  "plugins": ["prettier", "prefer-arrow"], 
+  "parserOptions": { 
+    "ecmaVersion": 2018, 
+    "sourceType": "module",
+    "ecmaFeatures": { 
+      "jsx": true
+    }
+  },
+  "rules": {
+    "prefer-arrow/prefer-arrow-functions": [
+      "error",
+      {
+        "disallowPrototype": true,
+        "singleReturnOnly": false,
+        "classPropertiesAllowed": false
+      }
+    ], 
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-filename-extension": 0,
+    "prettier/prettier": "error",
+    "react/display-name": "off",
+    "react/no-children-prop": 0
+  },
+  "ignorePatterns": ["node_modules/*", "/next.config.js", "README.md", "src/assets/*", "yarn.lock", "public"],
+  "settings": {
+    "react": {
+      "version": "detect" 
+    }
+  }
+}

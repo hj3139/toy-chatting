@@ -8,12 +8,7 @@ import Document, {
   DocumentContext
 } from 'next/document';
 
-import reset from 'styled-reset';
-import { ServerStyleSheet, createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  ${reset}
-`;
+import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
   render() {
@@ -27,7 +22,6 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-          <GlobalStyle />
           <Main />
           <NextScript />
         </body>

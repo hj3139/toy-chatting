@@ -4,6 +4,7 @@ const withLess = require('next-with-less');
 module.exports = widthPlugins([withLess], {
   reactStrictMode: true,
   esModule: true,
+  swcMinify: false,
 
   compiler: {
     styledComponents: true

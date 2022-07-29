@@ -1,12 +1,17 @@
-import type { NextPage } from 'next';
-import styled from 'styled-components';
+// atomic
+import { LoginForm } from 'atomic';
 
-const Test = styled.div`
-  color: red;
-`;
+// style component
+import { StyledHomeContainer, StyledHomeLogo } from './style';
+import Logo from 'assets/images/logo.png';
 
-const Home: NextPage = () => {
-  return <div>aaa</div>;
+const Home = () => {
+  return (
+    <StyledHomeContainer>
+      <StyledHomeLogo src={Logo.src} width={200} height={200} />
+      <LoginForm />
+    </StyledHomeContainer>
+  );
 };
 
 export default Home;

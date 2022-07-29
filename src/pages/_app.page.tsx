@@ -5,8 +5,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+  #__next {
+    height: 100vh;
+  }
 `;
-<GlobalStyle />;
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
